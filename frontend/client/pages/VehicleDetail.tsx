@@ -58,7 +58,9 @@ export function VehicleDetail() {
   }
 
   const specs = match.specs ?? null;
-  const imageUrl = match.image_url || null;
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+  const imageUrl = `${API_BASE_URL}${match.image_url}`;
   const gradientClass = getPlaceholderGradient(match.id);
   const formattedPrice = specs?.price ? formatPriceINR(specs.price) : null;
 
