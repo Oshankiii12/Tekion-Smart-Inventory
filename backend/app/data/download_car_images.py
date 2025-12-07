@@ -5,7 +5,7 @@ from pathlib import Path
 FILE_ID = os.getenv("CARS_ZIP_ID")
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-DOWNLOAD_DIR = BASE_DIR / "static" 
+DOWNLOAD_DIR = BASE_DIR / "static" / "cars_kaggle" 
 DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 ZIP_PATH = BASE_DIR / "app" / "data" / "cars_images.zip"

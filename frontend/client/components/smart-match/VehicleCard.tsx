@@ -39,11 +39,7 @@ function formatPriceINR(price?: number | null): string | null {
 export function VehicleCard({ match }: VehicleCardProps) {
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-  const imageUrl = match.image_url
-      ? match.image_url.startsWith("http")
-        ? match.image_url
-        : `${API_BASE_URL}${match.image_url}`
-      : null;
+  const imageUrl = `${API_BASE_URL}${match.image_url}`;
   const gradientClass = getPlaceholderGradient(match.id);
   const specs = match.specs ?? null;
   const formattedPrice = specs?.price ? formatPriceINR(specs.price) : null;
