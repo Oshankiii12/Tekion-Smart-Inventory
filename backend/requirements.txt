@@ -3,5 +3,5 @@ uvicorn
 python-dotenv
 pydantic
 requests
-pinecone-client
+pinecone
 google-genai
