@@ -1,4 +1,5 @@
 import json
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -11,6 +12,7 @@ from app.services.pinecone_client import query_similar
 from app.services.matcher_agent import score_candidates
 from app.services.supabase_client import save_recommendation
 from app.config import settings
+from dotenv import load_dotenv
 
 app = FastAPI(title="Lifestyle → Vehicle Recommender")
 
