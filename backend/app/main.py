@@ -14,9 +14,21 @@ from app.config import settings
 
 app = FastAPI(title="Lifestyle → Vehicle Recommender")
 
+load_dotenv()
+
+def get_allowed_origins() -> list[str]:
+    origins = os.getenv("ALLOWED_ORIGINS", "")
+
+    if not origins:
+        print("WARNING: No ALLOWED_ORIGINS set")
+        return []
+
+    return [origin.strip() for origin in origins.split(",")]
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173","http://localhost:8080","http://127.0.0.1:8080"],
+    allow_origins=get_allowed_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

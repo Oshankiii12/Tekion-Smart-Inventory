@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     fs: {
-      allow: ["./client","/Users/oshankipriya/Desktop/zen-home/"],
+      allow: ["./client","/Users/oshankipriya/Desktop/lifestyle-vehicle-recommendor/frontend"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },

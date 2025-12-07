@@ -6,7 +6,7 @@ import type { ChatMessage } from "@/types";
 interface ChatWidgetProps {
   onSubmit: (message: string) => Promise<string>;
   isLoading?: boolean;
-  messages: ChatMessage[];         
+  messages?: ChatMessage[];         
   onReset?: () => void;           
 }
 

@@ -26,7 +26,6 @@ class Settings:
     SUPABASE_URL = os.getenv("SUPABASE_URL")
     SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 
-    APP_ENV = os.getenv("APP_ENV") or "dev"
 
     @property
     def pinecone_index_name(self):

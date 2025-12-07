@@ -14,7 +14,6 @@ import { SmartMatch } from "./pages/SmartMatch";
 import { VehicleDetail } from "./pages/VehicleDetail";
 import { Inventory } from "./pages/Inventory";
 import { History } from "./pages/History";
-import { Settings } from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import { recommend } from "@/services/api";
 
@@ -50,7 +49,6 @@ const AppContent = () => {
         <Route path="/vehicle/:id" element={<VehicleDetail />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/history" element={<History />} />
-        <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {chatOpen && (
