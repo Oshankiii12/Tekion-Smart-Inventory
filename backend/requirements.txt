@@ -5,3 +5,4 @@ pydantic
 requests
 pinecone
 google-genai
+gdown
